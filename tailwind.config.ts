@@ -37,11 +37,6 @@ export default {
       },
 
       background: "var(--background)",
-
-      "dark-gradient": {
-        from: "#1A1A1A",
-        to: "#131313",
-      },
     },
     fontSize: {
       10: "10px",
@@ -63,7 +58,15 @@ export default {
       inter: ["var(--font-inter)", "Inter", "sans-serif"],
       nanum: ["var(--font-nanum)"],
     },
-    extend: {},
+    extend: {
+      backgroundImage: {
+        "dark-gradient":
+          "linear-gradient(90deg, rgba(26,26,26,1) 0%, rgba(19,19,19,1) 100%)",
+      },
+      dropShadow: {
+        button: "0px 7px 4px rgba(0, 0, 0, 0.15)",
+      },
+    },
   },
   plugins: [],
 } satisfies Config;
