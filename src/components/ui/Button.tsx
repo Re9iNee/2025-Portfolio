@@ -1,22 +1,14 @@
-import { ChevronRight, PlusIcon } from "lucide-react";
-import { ReactNode } from "react";
-
-type Props = {
-  children: ReactNode;
-  mode?: "dark" | "light";
-  variant?: "primary" | "secondary" | "text";
-};
-
-import { cn } from "@/lib/utils"; // A utility function to merge classNames
+import { cn } from "@/lib/utils";
 import { cva, VariantProps } from "class-variance-authority";
+import { ReactNode } from "react";
 
 const buttonVariants = cva(
   "inline-flex rounded-lg font-medium transition-all items-center px-8 py-4 font-inter font-medium gap-2",
   {
     variants: {
       variant: {
-        primary: "drop-shadow-button bg-dark-gradient text-white",
-        secondary: "bg-onyx text-gray-dark dark:bg-faint-white",
+        primary: "dark:drop-shadow-button bg-dark-gradient text-white",
+        secondary: "bg-white-faint text-onyx dark:text-gray-dark dark:bg-onyx ",
         text: "",
       },
     },
@@ -28,9 +20,14 @@ const buttonVariants = cva(
 
 interface ButtonProps
   extends React.ButtonHTMLAttributes<HTMLButtonElement>,
-    VariantProps<typeof buttonVariants> {}
+    VariantProps<typeof buttonVariants> {
+  icon?: ReactNode;
+  suffix?: ReactNode;
+}
 
 export const Button: React.FC<ButtonProps> = ({
+  icon,
+  suffix,
   variant,
   children,
   className,
@@ -41,9 +38,9 @@ export const Button: React.FC<ButtonProps> = ({
       className={cn("text-18", buttonVariants({ variant }), className)}
       {...props}
     >
-      <PlusIcon />
+      {icon}
       {children}
-      <ChevronRight />
+      {suffix}
     </button>
   );
 };
