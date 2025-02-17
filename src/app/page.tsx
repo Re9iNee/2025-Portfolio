@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/Button";
 import { XIcon } from "lucide-react";
 import ThemeSwitch from "./ThemeSwitch";
 import CustomLink from "@/components/ui/Link";
+import Tag, { AudioBook } from "@/components/ui/Tag";
 
 export default function Home() {
   return (
@@ -15,6 +16,9 @@ export default function Home() {
       <CustomLink href={""}>
         <XIcon />
       </CustomLink>
+
+      <Tag>Label</Tag>
+      <AudioBook />
     </div>
   );
 }
