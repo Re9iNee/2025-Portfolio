@@ -20,10 +20,7 @@ export default {
       red: "rgba(233, 63, 64, 0.43)",
       yellow: "rgba(255, 184, 0, 0.43)",
       white: {
-        DEFAULT: "#FFFFFF",
-        10: "#FAFAFA",
-        25: "#F5F5F5",
-        70: "#B9BBBE",
+        DEFAULT: "hsl(var(--white))",
         faint: "#EDEDED",
       },
       black: {
