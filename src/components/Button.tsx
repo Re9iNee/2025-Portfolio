@@ -7,18 +7,43 @@ type Props = {
   variant?: "primary" | "secondary" | "text";
 };
 
-// TODO: you need to check for box shadows - cause it wasn't in style guide before
+import { cn } from "@/lib/utils"; // A utility function to merge classNames
+import { cva, VariantProps } from "class-variance-authority";
 
-export default function Button({
-  variant = "primary",
-  mode = "light",
+const buttonVariants = cva(
+  "inline-flex rounded-lg font-medium transition-all items-center px-8 py-4 font-inter font-medium gap-2",
+  {
+    variants: {
+      variant: {
+        primary: "drop-shadow-button bg-dark-gradient text-white",
+        secondary: "bg-onyx text-gray-dark dark:bg-faint-white",
+        text: "",
+      },
+    },
+    defaultVariants: {
+      variant: "primary",
+    },
+  },
+);
+
+interface ButtonProps
+  extends React.ButtonHTMLAttributes<HTMLButtonElement>,
+    VariantProps<typeof buttonVariants> {}
+
+export const Button: React.FC<ButtonProps> = ({
+  variant,
   children,
-}: Props) {
+  className,
+  ...props
+}) => {
   return (
-    <button className="drop-shadow-button inline-flex gap-2 rounded-lg bg-dark-gradient px-8 py-4 font-inter text-18 font-medium text-white">
+    <button
+      className={cn("text-18", buttonVariants({ variant }), className)}
+      {...props}
+    >
       <PlusIcon />
-      Button
+      {children}
       <ChevronRight />
     </button>
   );
-}
+};

@@ -1,11 +1,11 @@
-import Button from "@/components/Button";
-import { BiPlus } from "react-icons/bi";
+import { Button } from "@/components/Button";
 
 export default function Home() {
   return (
-    <div className="grid h-screen w-screen place-items-center font-inter text-10">
-      <Button>Good things go</Button>
-      <BiPlus />
+    <div className="flex h-screen w-screen flex-col place-items-center gap-4">
+      <Button variant={"primary"}>Primary</Button>
+      <Button variant={"secondary"}>Secondary</Button>
+      <Button variant={"text"}>Text</Button>
     </div>
   );
 }

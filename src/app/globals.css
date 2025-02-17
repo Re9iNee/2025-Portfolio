@@ -2,10 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #fbfbfb;
-  --foreground: #171717;
-  --card-border: #383737;
+@layer base {
+  :root {
+    --background: #fbfbfb;
+    --foreground: #171717;
+    --card-border: #383737;
+  }
 }
 
 @media (prefers-color-scheme: dark) {
