@@ -1,7 +1,12 @@
 import type { Metadata } from "next";
 import { Inter, Nanum_Pen_Script } from "next/font/google";
 import "./globals.css";
+import Header from "./Header";
 import { Providers } from "./providers";
+import GradientImage from "@public/Gradient.png";
+import { ClassValue } from "clsx";
+import { cn } from "@/lib/utils";
+import Image from "next/image";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -27,10 +32,37 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body
-        className={`${inter.variable} ${nanum.variable} font-inter antialiased`}
+        className={`${inter.variable} ${nanum.variable} flex min-h-screen max-w-[100vw] flex-col items-center font-inter antialiased`}
       >
-        <Providers>{children}</Providers>
+        <Providers>
+          <TopGradient />
+          <Header />
+          {children}
+          <BottomGradient />
+        </Providers>
       </body>
     </html>
   );
+}
+
+function Gradient({ className }: { className: ClassValue }) {
+  return (
+    <Image
+      priority={false}
+      src={GradientImage}
+      alt="gradient image"
+      className={cn(
+        "pointer-events-none absolute w-[100vw] object-cover",
+        className,
+      )}
+    />
+  );
+}
+
+function TopGradient() {
+  return <Gradient className="top-0" />;
+}
+
+function BottomGradient() {
+  return <Gradient className="bottom-0 -scale-y-100" />;
 }
