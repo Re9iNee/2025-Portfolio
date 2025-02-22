@@ -1,12 +1,9 @@
-import Image from "next/image";
-import LogoSmallLight from "@public/logo/sm-light.png";
-import ThemeSwitch from "./ThemeSwitch";
+import LogoSmallLight from "@public/logo/sm-light.svg";
 
 export default function Header() {
   return (
-    <header className="flex justify-center">
-      <Image alt="logo" priority={false} src={LogoSmallLight}></Image>
-      <ThemeSwitch />
+    <header className="mt-8 flex justify-center gap-4">
+      <LogoSmallLight />
     </header>
   );
 }

@@ -17,7 +17,7 @@ export default function Home() {
         <div className="text-48 font-extrabold text-gray-dark">
           <p>Hi 👋🏻</p>
           <p>
-            I'm <span className="text-onyx">Reza Attar</span>
+            I'm <span className="text-onyx dark:text-white">Reza Attar</span>
           </p>
         </div>
 

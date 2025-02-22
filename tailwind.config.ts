@@ -29,15 +29,18 @@ export default {
         10: "#1F1F1F",
       },
       card: {
-        border: "var(--card-border)",
-        background: "var(--card-background)",
+        border: "hsl(var(--card-border))",
+        background: "hsl(var(--card-background))",
+      },
+      widget: {
+        background: "hsl(var(--widget-background))",
       },
       nav: {
         background: "hsl(var(--nav-background))",
         border: "hsl(var(--nav-border))",
       },
 
-      background: "var(--background)",
+      background: "hsl(var(--main-bg))",
     },
     fontSize: {
       10: "10px",

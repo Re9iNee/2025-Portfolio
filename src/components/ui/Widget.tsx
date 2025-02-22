@@ -17,7 +17,7 @@ export default function Widget({
   imageAlt,
 }: WidgetProps) {
   return (
-    <div className="rounded-4xl flex flex-col items-center gap-8 border border-card-border bg-card-background pt-8 text-center">
+    <div className="rounded-4xl dark:bg-widget-background flex flex-col items-center gap-8 border border-card-border bg-card-background pt-8 text-center">
       <div className="space-y-1 px-4">
         <h4 className="text-24 font-extrabold">{title}</h4>
         <h5 className="text-15 text-gray-dark">{subtitle}</h5>
