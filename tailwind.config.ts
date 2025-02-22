@@ -32,6 +32,10 @@ export default {
         border: "var(--card-border)",
         background: "var(--card-background)",
       },
+      nav: {
+        background: "hsl(var(--nav-background))",
+        border: "hsl(var(--nav-border))",
+      },
 
       background: "var(--background)",
     },
@@ -56,6 +60,9 @@ export default {
       nanum: ["var(--font-nanum)"],
     },
     extend: {
+      borderRadius: {
+        "4xl": "32px",
+      },
       backgroundImage: {
         "dark-gradient":
           "linear-gradient(90deg, rgba(26,26,26,1) 0%, rgba(19,19,19,1) 100%)",

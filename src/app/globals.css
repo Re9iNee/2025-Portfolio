@@ -6,8 +6,12 @@
   :root {
     --background: #fbfbfb;
     --foreground: #171717;
-    --card-border: #383737;
+    --card-border: #ebebeb;
+    --card-background: #f6f6f6;
     --white: 0 0% 100%;
+
+    --nav-background: 248 10% 10%;
+    --nav-border: 248 6% 17%;
   }
 }
 

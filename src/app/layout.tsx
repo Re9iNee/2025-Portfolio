@@ -7,6 +7,8 @@ import GradientImage from "@public/Gradient.png";
 import { ClassValue } from "clsx";
 import { cn } from "@/lib/utils";
 import Image from "next/image";
+import Footer from "./Footer";
+import Navbar from "@/components/ui/Navbar";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -32,12 +34,14 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body
-        className={`${inter.variable} ${nanum.variable} flex min-h-screen max-w-[100vw] flex-col items-center font-inter antialiased`}
+        className={`${inter.variable} ${nanum.variable} relative flex min-h-screen max-w-[100vw] flex-col items-center font-inter text-onyx antialiased`}
       >
         <Providers>
           <TopGradient />
           <Header />
           {children}
+          <Footer />
+          <Navbar />
           <BottomGradient />
         </Providers>
       </body>
@@ -52,7 +56,7 @@ function Gradient({ className }: { className: ClassValue }) {
       src={GradientImage}
       alt="gradient image"
       className={cn(
-        "pointer-events-none absolute w-[100vw] object-cover",
+        "pointer-events-none absolute -z-10 h-96 w-[100vw] object-cover",
         className,
       )}
     />
