@@ -21,7 +21,7 @@ export default {
       yellow: "rgba(255, 184, 0, 0.43)",
       white: {
         DEFAULT: "hsl(var(--white))",
-        faint: "#EDEDED",
+        faint: "#F3F3F3",
       },
       black: {
         DEFAULT: "#0D0D0D",

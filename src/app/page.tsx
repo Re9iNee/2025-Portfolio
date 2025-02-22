@@ -1,4 +1,3 @@
-import { Button } from "@/components/ui/Button";
 import Card from "@/components/ui/Card";
 import Widget, { LetsWorkTogether } from "@/components/ui/Widget";
 import { ChevronRight } from "lucide-react";
@@ -7,34 +6,12 @@ import Bookshelf from "@public/Bookshelf.png";
 import FaceEmoji from "@public/emoji.png";
 import Notebook from "@public/Notebook.png";
 import TechStack from "@public/tech-stack.png";
+import Hero from "./Hero";
 
 export default function Home() {
   return (
     <main className="space-y-28 p-4">
-      {/* Hero */}
-      <section aria-label="introduction" className="mt-60 space-y-4">
-        {/* hero title */}
-        <div className="text-48 font-extrabold text-gray-dark">
-          <p>Hi 👋🏻</p>
-          <p>
-            I'm <span className="text-onyx dark:text-white">Reza Attar</span>
-          </p>
-        </div>
-
-        <p className="text-15 font-medium text-gray-dark">
-          I am a front-end engineer and UI/UX designer helping startups turn
-          their visions into a digital reality. I specialize in designing and
-          building modern mobile and web-based apps.
-        </p>
-
-        <div
-          aria-label="call to actions"
-          className="flex flex-col items-center gap-4"
-        >
-          <Button variant={"primary"}>See my Resume</Button>
-          <Button variant={"secondary"}>Get in Touch</Button>
-        </div>
-      </section>
+      <Hero />
 
       <section aria-label="selected work">
         <h2 className="mb-4 text-32 font-bold">Selected Work</h2>

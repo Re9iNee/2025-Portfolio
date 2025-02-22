@@ -7,7 +7,7 @@ import ThemeSwitch from "./ThemeSwitch";
 
 export default function Header() {
   return (
-    <header className="mt-8 flex items-center justify-between gap-56 2xl:rounded-xl 2xl:border 2xl:border-white/25 2xl:bg-white/25">
+    <header className="mt-8 flex w-full items-center justify-center 2xl:justify-between 2xl:rounded-xl 2xl:border 2xl:border-white/25 2xl:bg-white/25">
       <DynamicLogo size="small" className="2xl:hidden" />
       <div className="hidden gap-10 p-4 text-16 2xl:flex">
         <DynamicLogo size="small" className="cursor-pointer" />
