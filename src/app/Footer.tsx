@@ -1,14 +1,8 @@
-"use client";
-
-import LogoBlack from "@public/logo/lg-dark.svg";
-import LogoWhite from "@public/logo/lg-light.svg";
 import Link from "next/link";
 
-import { useTheme } from "next-themes";
+import DynamicLogo from "./Logo";
 
 export default function Footer() {
-  const { resolvedTheme } = useTheme();
-
   return (
     <footer className="mt-32 w-full space-y-10 border-t border-black/10 pb-24 pl-4 pt-12 dark:border-white/10 dark:text-gray-light">
       <div className="flex flex-col gap-4">
@@ -27,7 +21,7 @@ export default function Footer() {
         <Link href={""}>Contact</Link>
       </div>
       <div className="space-y-4">
-        {resolvedTheme === "light" ? <LogoBlack /> : <LogoWhite />}
+        <DynamicLogo size="large" />
         <p>Thanks for stopping by ッ </p>
       </div>
 
