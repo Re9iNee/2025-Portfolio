@@ -50,16 +50,22 @@ export function ProjectPlaceholder() {
 
 export function LetsWorkTogether() {
   return (
-    <div className="flex flex-col justify-between gap-8 bg-background text-center">
-      <div>
-        <h4 className="text-32 font-bold">Let&apos;s work Together</h4>
-        <h5 className="text-15 text-gray-medium">
+    <div className="flex flex-col justify-between gap-8 bg-background text-center 2xl:flex-row 2xl:items-center 2xl:gap-0 2xl:text-left">
+      <div className="2xl:max-w-[50%]">
+        <h4 className="text-32 font-bold 2xl:text-48">
+          Let&apos;s work Together
+        </h4>
+        <h5 className="text-15 text-gray-medium 2xl:text-20">
           Want to discuss an opportunity to create something great? I&apos;m
           ready when you are.
         </h5>
       </div>
 
-      <Button variant={"primary"} icon={<SendHorizontal />}>
+      <Button
+        variant={"primary"}
+        icon={<SendHorizontal />}
+        className="2xl:w-fit"
+      >
         Get in Touch
       </Button>
     </div>
