@@ -1,10 +1,14 @@
 import Card from "@/components/ui/Card";
+import { cn } from "@/lib/utils";
+import { ClassValue } from "clsx";
 import { ChevronRight } from "lucide-react";
 
-function SelectedWork() {
+function SelectedWork({ className }: { className?: ClassValue }) {
   return (
-    <section aria-label="selected work">
-      <h2 className="mb-4 text-32 font-bold 2xl:text-48">Selected Work</h2>
+    <section aria-label="selected work" className={cn(className)}>
+      <h2 className="mb-4 text-32 font-bold 2xl:mb-8 2xl:text-48">
+        Selected Work
+      </h2>
       <div className="space-y-9">
         <Card
           title="Github"

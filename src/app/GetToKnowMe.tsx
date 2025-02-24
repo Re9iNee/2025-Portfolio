@@ -7,7 +7,9 @@ import TechStack from "@public/tech-stack.png";
 function GetToKnowMe() {
   return (
     <section aria-label="get to know me">
-      <h2 className="mb-4 text-32 font-bold 2xl:text-48">Get to know me</h2>
+      <h2 className="mb-4 text-32 font-bold 2xl:mb-8 2xl:text-48">
+        Get to know me
+      </h2>
       <div className="space-y-9 2xl:grid 2xl:grid-cols-2 2xl:gap-4 2xl:space-y-0">
         <Widget
           title="About Me"
