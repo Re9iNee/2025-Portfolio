@@ -4,7 +4,7 @@ import { ChevronRight } from "lucide-react";
 function SelectedWork() {
   return (
     <section aria-label="selected work">
-      <h2 className="mb-4 text-32 font-bold">Selected Work</h2>
+      <h2 className="mb-4 text-32 font-bold 2xl:text-48">Selected Work</h2>
       <div className="space-y-9">
         <Card
           title="Github"

@@ -17,20 +17,22 @@ export default function Widget({
   imageAlt,
 }: WidgetProps) {
   return (
-    <div className="rounded-4xl dark:bg-widget-background flex flex-col items-center gap-8 border border-card-border bg-card-background pt-8 text-center">
+    <div className="flex max-h-fit flex-col justify-between rounded-4xl border border-card-border bg-card-background pt-8 text-center dark:bg-widget-background">
       <div className="space-y-1 px-4">
-        <h4 className="text-24 font-extrabold">{title}</h4>
-        <h5 className="text-15 text-gray-dark">{subtitle}</h5>
+        <h4 className="text-24 font-extrabold 2xl:text-32">{title}</h4>
+        <h5 className="text-15 text-gray-dark 2xl:text-16">{subtitle}</h5>
       </div>
 
-      <Image src={image} alt={imageAlt} className="rounded-b-4xl" />
+      <div className="grid place-items-center overflow-hidden rounded-b-4xl">
+        <Image src={image} alt={imageAlt} />
+      </div>
     </div>
   );
 }
 
 export function ProjectPlaceholder() {
   return (
-    <div className="rounded-4xl flex flex-col items-center gap-6 border border-dashed border-gray-medium bg-card-background px-6 py-8">
+    <div className="flex flex-col items-center gap-6 rounded-4xl border border-dashed border-gray-medium bg-card-background px-6 py-8">
       <div className="flex flex-col items-center">
         <Stars width={49} height={50} className="text-gray-dark" />
         <h4 className="text-20 font-extrabold">YOUR PROJECT GOES HERE</h4>
