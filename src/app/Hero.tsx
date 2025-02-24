@@ -4,8 +4,8 @@ import Image from "next/image";
 
 export default function Hero() {
   return (
-    <div className="relative mt-40 flex">
-      <section aria-label="introduction" className="space-y-4 2xl:space-y-10">
+    <section aria-label="introduction" className="relative mt-40 flex">
+      <div className="space-y-4 2xl:space-y-10">
         <div className="text-48 font-extrabold text-gray-dark 2xl:text-80">
           <p className="2xl:hidden">Hi 👋🏻</p>
           <p>
@@ -23,20 +23,20 @@ export default function Hero() {
         >
           <Button variant={"primary"} className="2xl:w-fit">
             See my Resume
-          </Button>
+          </Button>{" "}
           <Button variant={"secondary"} className="2xl:w-fit">
             Get in Touch
           </Button>
         </div>
-      </section>
+      </div>
 
       <Image
         src={Portrait}
-        alt=""
+        alt="reza attar portrait image"
         width={540}
         height={540}
         className="hidden aspect-square rounded-full object-cover 2xl:block"
       />
-    </div>
+    </section>
   );
 }
