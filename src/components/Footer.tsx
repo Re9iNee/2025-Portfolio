@@ -1,11 +1,12 @@
 import Link from "next/link";
 
 import DynamicLogo from "./Logo";
+import Divider from "./ui/Divider";
 
 export default function Footer() {
   return (
-    <div>
-      <div className="mt-32 w-[99vw] border-t border-black/10 dark:border-white/10"></div>
+    <div className="mt-32">
+      <Divider />
       <footer className="mx-auto max-w-screen-lg space-y-12 pb-24 pl-4 pt-12 dark:text-gray-light 2xl:flex 2xl:flex-row-reverse 2xl:justify-between 2xl:space-y-0">
         <div className="space-y-10 2xl:flex 2xl:flex-row-reverse 2xl:gap-32 2xl:space-y-0">
           <div className="flex flex-col gap-4">

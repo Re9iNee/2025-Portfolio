@@ -7,6 +7,7 @@ import LogoSmallWhite from "@public/Logos/sm-light.svg";
 
 import { useTheme } from "next-themes";
 import Image from "next/image";
+import Link from "next/link";
 import { SVGProps, useEffect, useState } from "react";
 
 type Props = {
@@ -48,5 +49,9 @@ export default function DynamicLogo({
 
   const Logo = logos[size][resolvedTheme === "dark" ? "light" : "dark"];
 
-  return <Logo {...props} />;
+  return (
+    <Link href={"/"}>
+      <Logo {...props} />
+    </Link>
+  );
 }
