@@ -1,10 +1,9 @@
 "use client";
 
-import LogoLargeBlack from "@public/logo/lg-dark.svg";
-import LogoLargeWhite from "@public/logo/lg-light.svg";
-import LogoSmallBlack from "@public/logo/sm-dark.svg";
-import LogoSmallWhite from "@public/logo/sm-light.svg";
-import { ClassValue } from "clsx";
+import LogoLargeBlack from "@public/Logos/lg-dark.svg";
+import LogoLargeWhite from "@public/Logos/lg-light.svg";
+import LogoSmallBlack from "@public/Logos/sm-dark.svg";
+import LogoSmallWhite from "@public/Logos/sm-light.svg";
 
 import { useTheme } from "next-themes";
 import Image from "next/image";

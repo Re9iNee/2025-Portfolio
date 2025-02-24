@@ -1,13 +1,13 @@
 import type { Metadata } from "next";
 import { Inter, Nanum_Pen_Script } from "next/font/google";
 import "./globals.css";
-import Header from "./Header";
+import Header from "../components/Header";
 import { Providers } from "./providers";
 import GradientImage from "@public/Gradient.png";
 import { ClassValue } from "clsx";
 import { cn } from "@/lib/utils";
 import Image from "next/image";
-import Footer from "./Footer";
+import Footer from "../components/Footer";
 import Navbar from "@/components/ui/Navbar";
 
 const inter = Inter({

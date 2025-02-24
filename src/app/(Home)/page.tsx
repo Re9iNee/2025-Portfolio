@@ -1,8 +1,8 @@
 import { LetsWorkTogether } from "@/components/ui/Widget";
 
-import GetToKnowMe from "./GetToKnowMe";
-import Hero from "./Hero";
-import SelectedWork from "./SelectedWork";
+import GetToKnowMe from "./sections/GetToKnowMe";
+import Hero from "./sections/Hero";
+import SelectedWork from "./sections/SelectedWork";
 
 export default function Home() {
   return (

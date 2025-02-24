@@ -1,7 +1,7 @@
 import { StaticImport } from "next/dist/shared/lib/get-img-props";
 import Image from "next/image";
 
-import iPhoneScreenshot from "@public/Subbi.png";
+import iPhoneScreenshot from "@public/Projects/Subbi.png";
 import { ReactNode } from "react";
 
 type CardProps = {

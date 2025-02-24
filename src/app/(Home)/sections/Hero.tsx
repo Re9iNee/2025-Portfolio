@@ -31,10 +31,11 @@ export default function Hero() {
       </div>
 
       <Image
-        src={Portrait}
-        alt="reza attar portrait image"
         width={540}
         height={540}
+        src={Portrait}
+        placeholder="blur"
+        alt="reza attar portrait image"
         className="hidden aspect-square rounded-full object-cover 2xl:block"
       />
     </section>

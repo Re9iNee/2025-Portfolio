@@ -1,8 +1,8 @@
 import Widget from "@/components/ui/Widget";
-import Bookshelf from "@public/Bookshelf.png";
-import FaceEmoji from "@public/emoji.png";
-import Notebook from "@public/Notebook.png";
-import TechStack from "@public/tech-stack.png";
+import Bookshelf from "@public/Widgets/Bookshelf.png";
+import FaceEmoji from "@public/Widgets/emoji.png";
+import Notebook from "@public/Widgets/Notebook.png";
+import TechStack from "@public/Widgets/tech-stack.png";
 
 function GetToKnowMe() {
   return (
