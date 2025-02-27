@@ -22,23 +22,23 @@ export default function AboutPage() {
           height={322}
           placeholder="blur"
           src={PortraitImage}
-          className="rounded-lg"
+          className="rounded-lg border dark:border-gray-dark"
           alt="a portrait of Reza Attar"
         />
       </div>
 
-      <div className="space-y-8 [&>div>h3]:text-16 [&>div>h3]:font-semibold [&>div>p]:text-15 [&>div>p]:text-gray-dark [&>div]:space-y-2">
+      <div className="space-y-8 [&>div>h3]:text-16 [&>div>h3]:font-semibold [&>div>h3]:dark:text-gray-dark/50 [&>div>p]:text-15 [&>div>p]:text-gray-dark [&>div]:space-y-2">
         <div>
           <h3>WHO I AM</h3>
           <p>
-            I'm <span className="text-onyx">Reza</span>(Pronounced “Ee-hab”) a
-            multi-disciplinary front-end engineer and UI/UX designer based in
-            Rabat, Morocco 🇲🇦.
+            I'm <span className="text-onyx dark:text-white">Reza</span>
+            (Pronounced “Ee-hab”) a multi-disciplinary front-end engineer and
+            UI/UX designer based in Rabat, Morocco 🇲🇦.
           </p>
         </div>
         <div>
-          <h3 className="text-16 font-semibold">WHAT I DO</h3>
-          <p className="">
+          <h3>WHAT I DO</h3>
+          <p>
             With two years of invaluable experience in my role at Harmony
             Technology –– a tech company based here in Rabat, I have honed my
             skills in React.js, Next.js, TailwindCSS, and TypeScript, allowing
@@ -61,7 +61,7 @@ export default function AboutPage() {
           </p>
         </div>
       </div>
-      <p className="text-15 text-gray-dark [&>a]:text-onyx [&>a]:underline">
+      <p className="text-15 text-gray-dark [&>a]:text-onyx [&>a]:underline [&>a]:dark:text-white">
         Feel free to reach out via{" "}
         <Link href={"mailto:attarzadeh76@gmail.com"}>e-mail</Link>, or follow me
         on <Link href="link-to-x">Twitter</Link>. Want to see where I’ve worked?
