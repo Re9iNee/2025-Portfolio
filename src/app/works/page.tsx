@@ -56,7 +56,7 @@ export default function WorksPage() {
         </h2>
       </section>
 
-      <Divider className="" />
+      <Divider className="w-full" />
 
       <div className="space-y-4">
         {projects.map((project) => (
