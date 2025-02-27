@@ -32,11 +32,13 @@ export default function Widget({
 
 export function ProjectPlaceholder() {
   return (
-    <div className="flex flex-col items-center gap-6 rounded-4xl border border-dashed border-gray-medium bg-card-background px-6 py-8">
-      <div className="flex flex-col items-center">
-        <Stars width={49} height={50} className="text-gray-dark" />
+    <div className="flex h-[420px] flex-col items-center justify-between gap-6 rounded-4xl border border-dashed border-gray-medium bg-card-background px-6 py-8">
+      <div className="flex flex-col items-center gap-2">
+        <div className="grid h-28 w-28 place-items-center">
+          <Stars width={49} height={50} className="text-gray-dark" />
+        </div>
         <h4 className="text-20 font-extrabold">YOUR PROJECT GOES HERE</h4>
-        <h5 className="text-gray-dark">
+        <h5 className="mt-2 text-gray-dark">
           Let&apos;s turn your idea into a visual reality
         </h5>
       </div>
