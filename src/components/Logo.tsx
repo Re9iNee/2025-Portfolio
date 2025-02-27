@@ -1,22 +1,22 @@
 "use client";
 
+import { cn } from "@/lib/utils";
 import LogoLargeBlack from "@public/Logos/lg-dark.svg";
 import LogoLargeWhite from "@public/Logos/lg-light.svg";
 import LogoSmallBlack from "@public/Logos/sm-dark.svg";
 import LogoSmallWhite from "@public/Logos/sm-light.svg";
+import { ClassValue } from "clsx";
 
 import { useTheme } from "next-themes";
 import Image from "next/image";
 import Link from "next/link";
-import { SVGProps, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 
 type Props = {
+  className?: ClassValue;
   size: "large" | "small";
 };
-export default function DynamicLogo({
-  size,
-  ...props
-}: SVGProps<SVGElement> & Props) {
+export default function DynamicLogo({ size, className }: Props) {
   const { resolvedTheme } = useTheme();
 
   const [mounted, setMounted] = useState(false);
@@ -50,8 +50,8 @@ export default function DynamicLogo({
   const Logo = logos[size][resolvedTheme === "dark" ? "light" : "dark"];
 
   return (
-    <Link href={"/"}>
-      <Logo {...props} />
+    <Link href={"/"} className={cn("my-auto", className)}>
+      <Logo />
     </Link>
   );
 }

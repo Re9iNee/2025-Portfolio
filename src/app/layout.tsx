@@ -1,14 +1,14 @@
-import type { Metadata } from "next";
-import { Inter, Nanum_Pen_Script } from "next/font/google";
-import "./globals.css";
-import Header from "../components/Header";
-import { Providers } from "./providers";
+import Navbar from "@/components/ui/Navbar";
+import { cn } from "@/lib/utils";
 import GradientImage from "@public/Gradient.png";
 import { ClassValue } from "clsx";
-import { cn } from "@/lib/utils";
+import type { Metadata } from "next";
+import { Inter, Nanum_Pen_Script } from "next/font/google";
 import Image from "next/image";
 import Footer from "../components/Footer";
-import Navbar from "@/components/ui/Navbar";
+import Header from "../components/Header";
+import "./globals.css";
+import { Providers } from "./providers";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -34,7 +34,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body
-        className={`${inter.variable} ${nanum.variable} relative mx-auto flex min-h-screen max-w-screen-lg flex-col items-center font-inter text-onyx antialiased dark:text-white`}
+        className={`${inter.variable} ${nanum.variable} relative mx-auto flex min-h-screen max-w-screen-lg flex-col items-center overflow-x-hidden font-inter text-onyx antialiased dark:text-white`}
       >
         <TopGradient />
 
