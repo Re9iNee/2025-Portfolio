@@ -24,6 +24,8 @@ export default function AboutPage() {
           <Image
             width={250}
             height={322}
+            quality={100}
+            priority={false}
             placeholder="blur"
             src={PortraitImage}
             className="rounded-lg border object-cover dark:border-gray-dark 2xl:h-[443px] 2xl:w-[344px]"

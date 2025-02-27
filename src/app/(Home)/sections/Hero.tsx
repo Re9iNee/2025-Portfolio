@@ -33,7 +33,9 @@ export default function Hero() {
       <Image
         width={540}
         height={540}
+        quality={100}
         src={Portrait}
+        priority={false}
         placeholder="blur"
         alt="reza attar portrait image"
         className="hidden aspect-square rounded-full object-cover 2xl:block"
