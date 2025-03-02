@@ -7,8 +7,8 @@ export default function Footer() {
   return (
     <div className="mt-32">
       <Divider />
-      <footer className="mx-auto max-w-screen-lg space-y-12 pb-24 pl-4 pt-12 dark:text-gray-light 2xl:flex 2xl:flex-row-reverse 2xl:justify-between 2xl:space-y-0">
-        <div className="space-y-10 2xl:flex 2xl:flex-row-reverse 2xl:gap-32 2xl:space-y-0">
+      <footer className="mx-auto max-w-screen-lg space-y-12 pb-24 pl-4 pt-12 dark:text-gray-light xl:flex xl:flex-row-reverse xl:justify-between xl:space-y-0">
+        <div className="space-y-10 xl:flex xl:flex-row-reverse xl:gap-32 xl:space-y-0">
           <div className="flex flex-col gap-4">
             <h5 className="mb-4 text-16 font-bold dark:text-white">
               Elsewhere

@@ -11,16 +11,16 @@ export default function AboutPage() {
     <main className="mt-20 max-w-screen-lg space-y-16 [&>*]:px-4">
       <section className="max-w-[80%] space-y-2">
         <h1 className="sr-only">About Reza Attar</h1>
-        <h2 className="text-48 font-bold 2xl:text-80">A little bit about me</h2>
-        <h2 className="text-16 text-gray-medium 2xl:text-24">
+        <h2 className="text-48 font-bold xl:text-80">A little bit about me</h2>
+        <h2 className="text-16 text-gray-medium xl:text-24">
           Who I am and what I do.
         </h2>
       </section>
 
       <Divider className="w-full" />
 
-      <div className="space-y-16 2xl:flex 2xl:flex-row-reverse 2xl:justify-between 2xl:space-y-0">
-        <div className="2xl:space-y-24">
+      <div className="space-y-16 xl:flex xl:flex-row-reverse xl:justify-between xl:space-y-0">
+        <div className="xl:space-y-24">
           <Image
             width={250}
             height={322}
@@ -28,20 +28,20 @@ export default function AboutPage() {
             priority={false}
             placeholder="blur"
             src={PortraitImage}
-            className="rounded-lg border object-cover dark:border-gray-dark 2xl:h-[443px] 2xl:w-[344px]"
+            className="rounded-lg border object-cover dark:border-gray-dark xl:h-[443px] xl:w-[344px]"
             alt="a portrait of Reza Attar"
           />
           <Button
             variant={"primary"}
             icon={<SendHorizontal />}
-            className="mx-auto hidden w-fit 2xl:flex"
+            className="mx-auto hidden w-fit xl:flex"
           >
             Get in touch
           </Button>
         </div>
 
-        <div className="space-y-16 2xl:max-w-[50%]">
-          <div className="space-y-8 [&>div>h3]:text-16 [&>div>h3]:font-semibold [&>div>h3]:dark:text-gray-dark/50 [&>div>p]:text-15 [&>div>p]:text-gray-dark 2xl:[&>div>p]:text-18 [&>div]:space-y-2">
+        <div className="space-y-16 xl:max-w-[50%]">
+          <div className="space-y-8 [&>div>h3]:text-16 [&>div>h3]:font-semibold [&>div>h3]:dark:text-gray-dark/50 [&>div>p]:text-15 [&>div>p]:text-gray-dark xl:[&>div>p]:text-18 [&>div]:space-y-2">
             <div>
               <h3>WHO I AM</h3>
               <p>
@@ -86,13 +86,13 @@ export default function AboutPage() {
             <Link href={"link to linkedin"}>LinkedIn</Link>.
           </p>
           <div className="space-y-4">
-            <h5 className="2xl:hidden">Let&apos;s build something great,</h5>
+            <h5 className="xl:hidden">Let&apos;s build something great,</h5>
             <Signature />
           </div>
         </div>
       </div>
 
-      <div className="2xl:hidden">
+      <div className="xl:hidden">
         <Button variant={"primary"} icon={<SendHorizontal />}>
           Get in touch
         </Button>

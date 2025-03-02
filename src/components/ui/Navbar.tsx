@@ -59,7 +59,7 @@ export default function Navbar() {
   const currentRoute = "/";
 
   return (
-    <nav className="bg-nav-background/30 border-nav-border/30 dark:bg-nav-background/60 dark:border-nav-border/40 fixed bottom-3 flex min-w-[358px] justify-between rounded-xl border px-4 py-2.5 2xl:hidden">
+    <nav className="fixed bottom-3 flex min-w-[358px] justify-between rounded-xl border border-nav-border/30 bg-nav-background/30 px-4 py-2.5 dark:border-nav-border/40 dark:bg-nav-background/60 xl:hidden">
       {items.map((item) => (
         <Item key={item.link} isActive={item.link === currentRoute} {...item} />
       ))}

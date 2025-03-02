@@ -16,8 +16,8 @@ function ContactPage() {
     <main className="mt-20 w-full max-w-screen-lg space-y-16 [&>*]:px-4">
       <section className="max-w-[80%] space-y-2">
         <h1 className="sr-only">Contact Reza Attar</h1>
-        <h1 className="text-48 font-bold 2xl:text-80">Get in touch</h1>
-        <h2 className="text-16 text-gray-medium 2xl:text-24">
+        <h1 className="text-48 font-bold xl:text-80">Get in touch</h1>
+        <h2 className="text-16 text-gray-medium xl:text-24">
           Let&apos;s build something awesome.
         </h2>
       </section>
@@ -66,12 +66,12 @@ function ContactPage() {
           placeholder="Write your message here"
         />
 
-        <Button className="mb-6 2xl:w-fit 2xl:self-end">Send</Button>
+        <Button className="mb-6 xl:w-fit xl:self-end">Send</Button>
       </section>
 
       <section
         aria-label="link to other social medias"
-        className="mx-auto grid w-fit grid-cols-3 gap-11 text-24 2xl:flex [&>*]:cursor-pointer"
+        className="mx-auto grid w-fit grid-cols-3 gap-11 text-24 xl:flex [&>*]:cursor-pointer"
       >
         <MdEmail />
         <LuNotebook />
@@ -108,14 +108,14 @@ function InputContainer({
         className,
       )}
     >
-      <label htmlFor={id} className="text-14 font-medium 2xl:text-16">
+      <label htmlFor={id} className="text-14 font-medium xl:text-16">
         {label}:
       </label>
       <input
         id={id}
         name={id}
         type={inputType}
-        className="bg-transparent w-full text-14 placeholder:text-gray-dark focus:outline-none dark:placeholder:text-gray-medium 2xl:text-16"
+        className="bg-transparent w-full text-14 placeholder:text-gray-dark focus:outline-none dark:placeholder:text-gray-medium xl:text-16"
         placeholder={placeholder}
       />
     </div>

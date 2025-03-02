@@ -50,8 +50,8 @@ export default function WorksPage() {
   return (
     <main className="mt-20 w-full max-w-screen-lg space-y-16 [&>*]:px-4">
       <section className="max-w-[80%] space-y-2">
-        <h1 className="text-48 font-bold 2xl:text-80">Projects</h1>
-        <h2 className="text-16 text-gray-medium 2xl:text-24">
+        <h1 className="text-48 font-bold xl:text-80">Projects</h1>
+        <h2 className="text-16 text-gray-medium xl:text-24">
           Projects and ideas I’ve worked on
         </h2>
       </section>

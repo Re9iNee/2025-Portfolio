@@ -9,7 +9,7 @@ export default function Home() {
     <main className="space-y-28 p-4">
       <Hero />
 
-      <SelectedWork className="2xl:pt-28" />
+      <SelectedWork className="xl:pt-28" />
 
       <GetToKnowMe />
 

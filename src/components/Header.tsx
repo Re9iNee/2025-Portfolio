@@ -15,9 +15,9 @@ import ThemeSwitch from "./ThemeSwitch";
 
 export default function Header() {
   return (
-    <header className="mt-8 flex w-full items-center justify-center 2xl:justify-between 2xl:rounded-xl 2xl:border 2xl:border-white/25 2xl:bg-white/25">
-      <DynamicLogo size="small" className="2xl:hidden" />
-      <div className="hidden gap-10 p-4 text-16 2xl:flex">
+    <header className="mt-8 flex w-full items-center justify-center xl:justify-between xl:rounded-xl xl:border xl:border-white/25 xl:bg-white/25">
+      <DynamicLogo size="small" className="xl:hidden" />
+      <div className="hidden gap-10 p-4 text-16 xl:flex">
         <DynamicLogo size="small" />
 
         <NavigationMenu>
@@ -83,7 +83,7 @@ export default function Header() {
         </NavigationMenu>
       </div>
 
-      <div className="hidden items-center gap-6 p-4 text-24 2xl:flex">
+      <div className="hidden items-center gap-6 p-4 text-24 xl:flex">
         <FaLinkedin />
         <FaXTwitter />
         <FaGithub />
@@ -104,13 +104,13 @@ const ListItem = React.forwardRef<
         <a
           ref={ref}
           className={cn(
-            "hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors",
+            "block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground",
             className,
           )}
           {...props}
         >
           <div className="text-sm font-medium leading-none">{title}</div>
-          <p className="text-sm text-muted-foreground line-clamp-2 leading-snug">
+          <p className="text-sm line-clamp-2 leading-snug text-muted-foreground">
             {children}
           </p>
         </a>
