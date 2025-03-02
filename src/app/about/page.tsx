@@ -45,7 +45,7 @@ export default function AboutPage() {
             <div>
               <h3>WHO I AM</h3>
               <p>
-                I'm <span className="text-onyx dark:text-white">Reza</span>
+                I&apos;m <span className="text-onyx dark:text-white">Reza</span>
                 (Pronounced “Ee-hab”) a multi-disciplinary front-end engineer
                 and UI/UX designer based in Rabat, Morocco 🇲🇦.
               </p>

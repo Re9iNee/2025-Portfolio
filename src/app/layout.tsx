@@ -18,6 +18,7 @@ const inter = Inter({
 
 const nanum = Nanum_Pen_Script({
   weight: "400",
+  subsets: ["latin"],
   variable: "--font-nanum",
 });
 

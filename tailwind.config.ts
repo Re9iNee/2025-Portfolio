@@ -10,6 +10,7 @@ export default {
   darkMode: ["class"],
   theme: {
     colors: {
+      transparent: "rgba(0, 0, 0, 0%)",
       onyx: "#181818",
       gray: {
         dark: "#808080",
@@ -39,6 +40,7 @@ export default {
         background: "hsl(var(--nav-background))",
         border: "hsl(var(--nav-border))",
       },
+
       background: "hsl(var(--main-bg))",
     },
     fontSize: {
@@ -72,11 +74,14 @@ export default {
         "dark-gradient":
           "linear-gradient(90deg, rgba(26,26,26,1) 0%, rgba(19,19,19,1) 100%)",
       },
+      boxShadow: {
+        inner: "0 -1px 0px 0px rgba(0, 0, 0, 3)",
+      },
       dropShadow: {
         button: "0px 7px 4px rgba(0, 0, 0, 0.15)",
       },
       colors: {
-        background: "hsl(var(--background))",
+        "shad-background": "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
         card: {
           DEFAULT: "hsl(var(--card))",

@@ -9,7 +9,8 @@ export default function Hero() {
         <div className="text-48 font-extrabold text-gray-dark 2xl:text-80">
           <p className="2xl:hidden">Hi 👋🏻</p>
           <p>
-            I'm <span className="text-onyx dark:text-white">Reza Attar</span>
+            I&apos;m{" "}
+            <span className="text-onyx dark:text-white">Reza Attar</span>
           </p>
         </div>
         <p className="text-15 font-medium text-gray-dark 2xl:max-w-[70%] 2xl:text-24">
