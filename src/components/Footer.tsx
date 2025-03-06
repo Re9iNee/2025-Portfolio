@@ -32,7 +32,7 @@ export default function Footer() {
             <DynamicLogo size="large" />
             <p>Thanks for stopping by ッ </p>
           </div>
-          <p className="text-14">© 2023 Eihab Khan. All Rights Reserved.</p>
+          <p className="text-14">© 2023 Reza Attar. All Rights Reserved.</p>
         </div>
       </footer>
     </div>

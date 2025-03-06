@@ -2,6 +2,7 @@ import Card from "@/components/ui/Card";
 import { cn } from "@/lib/utils";
 import { ClassValue } from "clsx";
 import { ChevronRight } from "lucide-react";
+import Link from "next/link";
 
 function SelectedWork({ className }: { className?: ClassValue }) {
   return (
@@ -11,38 +12,47 @@ function SelectedWork({ className }: { className?: ClassValue }) {
       </h2>
       <div className="space-y-9">
         <Card
-          title="Github"
-          description="Subbi is a side project that I’ve built to help me keep track of how much I spend on subscriptions and also to prevent the “accidental” bill after a 14-day trail ends. It helps you keep track of bills like Netflix, Spotify, Xbox Game Pass, Bus Card, Bank Cards, and many more."
-          image={"/icons/Github.svg"}
+          title="Mora"
+          description="Mora is an online school platform developed to manage students teachers and every aspect of school management"
+          image={"/Projects/mora-logo.ico"}
           imageAlt="Github Icon"
           cta={
-            <>
-              Download App <ChevronRight />
-            </>
+            <Link
+              href={"https://mora-ed.com"}
+              className="flex items-center gap-1"
+            >
+              Visit Site <ChevronRight width={20} className="pt-0.5" />
+            </Link>
           }
         />
 
         <Card
-          title="Discord"
-          description="With the release of the new React website on March 16, there was a need for localization to make the documentation accessible to Arabic-speaking developers. I contributed to translating several documentation, worked with great developers, Improved my ability to write better PR requests, and as a side effect, I now know more about the Arabic grammar."
-          image={"/icons/Discord.svg"}
+          title="Cleafin Marketplace"
+          description="MLM Marketplace to manage every aspect of selling online stuff, including digital content or real life products. It has unique features to manage stock, users and ... which supports Multi language websites with different currencies."
+          image={"/Projects/cleafin.webp"}
           imageAlt="Discord Icon"
           cta={
-            <>
-              Visit Site <ChevronRight />
-            </>
+            <Link
+              href={"https://cleafin.shop/"}
+              className="flex items-center gap-1"
+            >
+              Visit Site <ChevronRight width={20} className="pt-0.5" />
+            </Link>
           }
         />
 
         <Card
-          title="Storybook Documentation"
-          description="This was my very first OSS contribution, I contributed to translating the documentation of Storybook into Arabic, enabling a wider audience to access and understand the resources available. I gained valuable experience in working effectively with teams and navigating the pull request process."
-          image={"/icons/Dribble.svg"}
+          title="Wordpress Websites"
+          description="Worked on so many Wordpress projects. this is the most recent one. This website is designed to showcase electric products on their website."
+          image={"/Projects/wordpress.png"}
           imageAlt="Dribble Icon"
           cta={
-            <>
-              Visit Site <ChevronRight />
-            </>
+            <Link
+              href={"https://aria-electric.com/"}
+              className="flex items-center gap-1"
+            >
+              Visit Site <ChevronRight width={20} className="pt-0.5" />
+            </Link>
           }
         />
       </div>

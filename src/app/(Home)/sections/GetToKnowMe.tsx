@@ -12,6 +12,7 @@ function GetToKnowMe() {
       </h2>
       <div className="space-y-9 xl:grid xl:grid-cols-2 xl:gap-4 xl:space-y-0">
         <Widget
+          href="/about"
           title="About Me"
           image={FaceEmoji}
           imageAlt="My Face Emoji"
@@ -19,6 +20,7 @@ function GetToKnowMe() {
         />
 
         <Widget
+          href="#"
           title="Tech Stack"
           image={TechStack}
           imageAlt="Tech Stack Image"
@@ -26,13 +28,16 @@ function GetToKnowMe() {
         />
 
         <Widget
+          openInNewTab
           title="Bookshelf"
           image={Bookshelf}
           imageAlt="Books image"
           subtitle="Books I've enjoyed reading"
+          href="https://www.goodreads.com/user/show/97249582"
         />
 
         <Widget
+          href="#"
           title="Notebook"
           image={Notebook}
           imageAlt="Notebook image"

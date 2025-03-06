@@ -3,21 +3,34 @@ import { StaticImport } from "next/dist/shared/lib/get-img-props";
 import { SendHorizontal, Stars } from "lucide-react";
 import Image from "next/image";
 import { Button } from "./Button";
+import Link from "next/link";
+import { cn } from "@/lib/utils";
 
 type WidgetProps = {
-  image: string | StaticImport;
-  imageAlt: string;
+  href: string;
   title: string;
   subtitle: string;
+  imageAlt: string;
+  openInNewTab?: boolean;
+
+  image: string | StaticImport;
 };
 export default function Widget({
+  href,
+  image,
   title,
   subtitle,
-  image,
   imageAlt,
+  openInNewTab = false,
 }: WidgetProps) {
   return (
-    <div className="flex max-h-fit flex-col justify-between rounded-4xl border border-card-border bg-card-background pt-8 text-center dark:bg-widget-background">
+    <Link
+      href={href}
+      target={openInNewTab ? "_blank" : "_self"}
+      className={cn(
+        "flex max-h-fit flex-col justify-between rounded-4xl border border-card-border bg-card-background pt-8 text-center dark:bg-widget-background",
+      )}
+    >
       <div className="space-y-1 px-4">
         <h4 className="text-24 font-extrabold xl:text-32">{title}</h4>
         <h5 className="text-15 text-gray-dark xl:text-16">{subtitle}</h5>
@@ -26,7 +39,7 @@ export default function Widget({
       <div className="grid place-items-center overflow-hidden rounded-b-4xl">
         <Image src={image} alt={imageAlt} />
       </div>
-    </div>
+    </Link>
   );
 }
 

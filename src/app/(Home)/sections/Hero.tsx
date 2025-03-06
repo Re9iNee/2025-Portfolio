@@ -14,9 +14,13 @@ export default function Hero() {
           </p>
         </div>
         <p className="text-15 font-medium text-gray-dark xl:max-w-[70%] xl:text-24">
-          I am a front-end engineer and UI/UX designer helping startups turn
-          their visions into a digital reality. I specialize in designing and
-          building modern mobile and web-based apps.
+          I build web-apps <br /> Real{" "}
+          <span className="font-bold text-onyx">Fast!</span> <br /> Real{" "}
+          <span className="font-bold text-onyx">Optimized!</span> <br /> No need
+          to look for another engineer I do all the work!{" "}
+          <span className="font-bold text-onyx">Back-end Front-end</span>, Just
+          give me an <span className="underline">Idea!</span> Sky&apos;s the
+          limit for us!
         </p>
         <div
           aria-label="call to actions"
