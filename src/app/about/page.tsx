@@ -1,10 +1,11 @@
 import { Button } from "@/components/ui/Button";
 import Divider from "@/components/ui/Divider";
 import PortraitImage from "@public/portrait.jpg";
-import Signature from "@public/Signature.svg";
 import { SendHorizontal } from "lucide-react";
+
 import Image from "next/image";
 import Link from "next/link";
+import Signature from "./Signature";
 
 export default function AboutPage() {
   return (
@@ -46,34 +47,35 @@ export default function AboutPage() {
               <h3>WHO I AM</h3>
               <p>
                 I&apos;m <span className="text-onyx dark:text-white">Reza</span>
-                (Pronounced “Ee-hab”) a multi-disciplinary front-end engineer
-                and UI/UX designer based in Rabat, Morocco 🇲🇦.
+                (Pronounced “Rezâ”) a front-end engineer and back-end engineer
+                based in Mashhad, Iran 🇮🇷.
               </p>
             </div>
             <div>
               <h3>WHAT I DO</h3>
               <p>
-                With two years of invaluable experience in my role at Harmony
-                Technology –– a tech company based here in Rabat, I have honed
-                my skills in React.js, Next.js, TailwindCSS, and TypeScript,
-                allowing me to craft seamless and interactive user experiences.
-                During my time at Harmony Technology, I had the privilege of
-                collaborating on projects for esteemed clients such as the
-                Ministry of Health, Ministry of Education, and Ministry of
-                Justice. It was an incredibly rewarding experience to develop
-                applications that directly impact the lives of Moroccan
-                citizens.
+                With 8 years of experience in my different roles at different
+                companies! I decided to grow my personal brand! I have honed my
+                skills in ReactJS, NextJS, Tailwindcss, Typescript, Cypress,
+                NodeJS, Vitest. Started a{" "}
+                <Link
+                  href={"https://www.youtube.com/@RezaAttarCode"}
+                  target="_blank"
+                  className="text-onyx underline dark:text-white"
+                >
+                  Youtube Channel
+                </Link>{" "}
+                since 2024 to teach people and help the people in need!
               </p>
             </div>
             <div>
               <h3>WHAT I DID</h3>
               <p>
-                Before delving into the realm of front end engineering, I spent
-                five years as a graphic designer. This background has equipped
-                me with a keen eye for aesthetics and a deep understanding of
-                user-centered design principles. It enables me to seamlessly
-                blend functionality and visual appeal in every project I
-                undertake.
+                Before becoming a software engineer I was always curious how
+                electronic devices work, Starting with linux and continued my
+                journey in Wordpress, It boosts me up up by tons! This was from
+                the age of 15, Attended to two coding contests in Tehran Sharif
+                University and win them both with my friends and teammates!
               </p>
             </div>
           </div>

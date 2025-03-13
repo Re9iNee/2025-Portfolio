@@ -1,9 +1,9 @@
 "use client";
 
-import { FiSun, FiMoon } from "react-icons/fi";
-import { useState, useEffect } from "react";
 import { useTheme } from "next-themes";
 import Image from "next/image";
+import { useEffect, useState } from "react";
+import { FiMoon, FiSun } from "react-icons/fi";
 
 export default function ThemeSwitch() {
   const [mounted, setMounted] = useState(false);
