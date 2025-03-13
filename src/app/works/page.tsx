@@ -1,13 +1,7 @@
-import Card, { CardProps } from "@/components/ui/Card";
+import Card from "@/components/ui/Card";
 import Divider from "@/components/ui/Divider";
 import { ProjectPlaceholder } from "@/components/ui/Widget";
-import { ChevronRight } from "lucide-react";
-import Link from "next/link";
 
-import cleafin from "@public/Projects/cleafin.png";
-import moraBlog from "@public/Projects/mora-blog.png";
-import moraDash from "@public/Projects/mora-dash.png";
-import aria from "@public/Projects/aria-electric.png";
 import { projects } from "../../lib/projects";
 
 export default function WorksPage() {

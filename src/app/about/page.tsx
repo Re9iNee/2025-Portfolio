@@ -6,6 +6,7 @@ import { SendHorizontal } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import Signature from "../../components/about/Signature";
+import { generateEmailLink } from "@/lib/utils";
 
 export default function AboutPage() {
   return (
@@ -37,7 +38,7 @@ export default function AboutPage() {
             icon={<SendHorizontal />}
             className="mx-auto hidden w-fit xl:flex"
           >
-            Get in touch
+            <Link href={generateEmailLink({})}>Get in touch</Link>
           </Button>
         </div>
 
@@ -96,7 +97,7 @@ export default function AboutPage() {
 
       <div className="xl:hidden">
         <Button variant={"primary"} icon={<SendHorizontal />}>
-          Get in touch
+          <Link href={generateEmailLink({})}>Get in touch</Link>
         </Button>
       </div>
     </main>

@@ -1,15 +1,12 @@
-import { Button } from "@/components/ui/Button";
 import Divider from "@/components/ui/Divider";
-import { cn } from "@/lib/utils";
 import Close from "@public/Contact Window/close.svg";
 import Fullscreen from "@public/Contact Window/fullscreen.svg";
 import Minimize from "@public/Contact Window/minimize.svg";
-import { ClassValue } from "clsx";
-import { HTMLInputTypeAttribute } from "react";
 import { LuNotebook } from "react-icons/lu";
 import { MdEmail } from "react-icons/md";
 
 import { FaDiscord, FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa6";
+import ContactForm from "./form";
 
 function ContactPage() {
   return (
@@ -40,33 +37,7 @@ function ContactPage() {
           <h4 className="text-16 font-medium">New message</h4>
         </div>
 
-        <div className="space-y-4">
-          <InputContainer
-            label="Email"
-            inputType="email"
-            id="email"
-            placeholder="Enter your email address"
-          />
-          <InputContainer
-            label="Name"
-            inputType="text"
-            id="name"
-            placeholder="Enter your name"
-          />
-          <InputContainer
-            label="Subject"
-            id="subject"
-            placeholder="Enter subject"
-            inputType="text"
-          />
-        </div>
-
-        <textarea
-          className="mt-6 min-h-80 w-full rounded-xl bg-white-faint p-6 placeholder:text-gray-dark dark:bg-background"
-          placeholder="Write your message here"
-        />
-
-        <Button className="mb-6 xl:w-fit xl:self-end">Send</Button>
+        <ContactForm />
       </section>
 
       <section
@@ -86,38 +57,3 @@ function ContactPage() {
 }
 
 export default ContactPage;
-
-type Props = {
-  id: string;
-  label: string;
-  placeholder: string;
-  className?: ClassValue;
-  inputType: HTMLInputTypeAttribute;
-};
-function InputContainer({
-  label,
-  inputType,
-  id,
-  placeholder,
-  className,
-}: Props) {
-  return (
-    <div
-      className={cn(
-        "flex gap-2 border-b border-b-gray-light pb-4 last:border-b-0 dark:border-b-white/10",
-        className,
-      )}
-    >
-      <label htmlFor={id} className="text-14 font-medium xl:text-16">
-        {label}:
-      </label>
-      <input
-        id={id}
-        name={id}
-        type={inputType}
-        className="bg-transparent w-full text-14 placeholder:text-gray-dark focus:outline-none dark:placeholder:text-gray-medium xl:text-16"
-        placeholder={placeholder}
-      />
-    </div>
-  );
-}
