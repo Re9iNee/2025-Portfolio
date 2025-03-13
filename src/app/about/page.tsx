@@ -5,7 +5,7 @@ import { SendHorizontal } from "lucide-react";
 
 import Image from "next/image";
 import Link from "next/link";
-import Signature from "./Signature";
+import Signature from "../../components/about/Signature";
 
 export default function AboutPage() {
   return (
