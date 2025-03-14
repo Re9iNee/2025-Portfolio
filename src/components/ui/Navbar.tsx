@@ -4,10 +4,6 @@ import { IconType } from "react-icons";
 import {
   RiHome9Fill,
   RiHomeLine,
-  RiMenuFill,
-  RiMenuLine,
-  RiMessage2Fill,
-  RiMessage2Line,
   RiPencilFill,
   RiPencilLine,
   RiSuitcase2Fill,
@@ -23,29 +19,19 @@ const items: Item[] = [
     PassiveIcon: RiHomeLine,
   },
   {
-    link: "/contact-us",
+    link: "/about",
     ActiveIcon: RiUser2Fill,
     PassiveIcon: RiUser2Line,
   },
   {
-    link: "/bag",
+    link: "/works",
     ActiveIcon: RiSuitcase2Fill,
     PassiveIcon: RiSuitcase2Line,
   },
   {
-    link: "/write",
+    link: "/contact",
     ActiveIcon: RiPencilFill,
     PassiveIcon: RiPencilLine,
-  },
-  {
-    link: "/letter",
-    ActiveIcon: RiMessage2Fill,
-    PassiveIcon: RiMessage2Line,
-  },
-  {
-    link: "/shelf",
-    ActiveIcon: RiMenuFill,
-    PassiveIcon: RiMenuLine,
   },
 ] as const;
 

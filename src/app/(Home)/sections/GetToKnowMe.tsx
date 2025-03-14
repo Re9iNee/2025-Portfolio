@@ -20,6 +20,7 @@ function GetToKnowMe() {
         />
 
         <Widget
+          isComingSoon
           href="#"
           title="Tech Stack"
           image={TechStack}
@@ -38,6 +39,7 @@ function GetToKnowMe() {
 
         <Widget
           href="#"
+          isComingSoon
           title="Notebook"
           image={Notebook}
           imageAlt="Notebook image"

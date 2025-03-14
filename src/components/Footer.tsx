@@ -22,6 +22,12 @@ export default function Footer() {
             </Link>
             <Link
               target="_blank"
+              href={"https://www.youtube.com/@RezaAttarCode"}
+            >
+              Youtube
+            </Link>
+            <Link
+              target="_blank"
               href={"https://www.linkedin.com/in/rezaattarzadeh/"}
             >
               LinkedIn

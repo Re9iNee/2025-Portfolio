@@ -1,10 +1,10 @@
 import { StaticImport } from "next/dist/shared/lib/get-img-props";
 
+import { cn, generateEmailLink } from "@/lib/utils";
 import { SendHorizontal, Stars } from "lucide-react";
 import Image from "next/image";
-import { Button } from "./Button";
 import Link from "next/link";
-import { cn, generateEmailLink } from "@/lib/utils";
+import { Button } from "./Button";
 
 type WidgetProps = {
   href: string;
@@ -12,6 +12,7 @@ type WidgetProps = {
   subtitle: string;
   imageAlt: string;
   openInNewTab?: boolean;
+  isComingSoon?: boolean;
 
   image: string | StaticImport;
 };
@@ -21,14 +22,14 @@ export default function Widget({
   title,
   subtitle,
   imageAlt,
+  isComingSoon = false,
   openInNewTab = false,
 }: WidgetProps) {
-  return (
-    <Link
-      href={href}
-      target={openInNewTab ? "_blank" : "_self"}
+  const Content = (
+    <div
       className={cn(
-        "flex max-h-fit flex-col justify-between rounded-4xl border border-card-border bg-card-background pt-8 text-center dark:bg-widget-background",
+        "pt-8",
+        isComingSoon && "transition-all group-hover:blur group-hover:grayscale",
       )}
     >
       <div className="space-y-1 px-4">
@@ -39,6 +40,29 @@ export default function Widget({
       <div className="grid place-items-center overflow-hidden rounded-b-4xl">
         <Image src={image} alt={imageAlt} />
       </div>
+    </div>
+  );
+  const containerClassNames = cn(
+    "flex max-h-fit flex-col justify-between rounded-4xl border border-card-border bg-card-background text-center dark:bg-widget-background group",
+  );
+
+  if (isComingSoon)
+    return (
+      <div className={cn(containerClassNames, "relative")}>
+        <div className="absolute z-10 grid h-full w-full cursor-not-allowed select-none place-items-center rounded-4xl bg-onyx/80 pt-0 text-40 font-medium text-white opacity-0 transition-all duration-300 group-hover:grid group-hover:opacity-100">
+          <span className="hidden group-hover:block">COMING SOON</span>
+        </div>
+        {Content}
+      </div>
+    );
+
+  return (
+    <Link
+      href={href}
+      target={openInNewTab ? "_blank" : "_self"}
+      className={containerClassNames}
+    >
+      {Content}
     </Link>
   );
 }
