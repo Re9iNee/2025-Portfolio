@@ -2,6 +2,7 @@ import Link from "next/link";
 
 import DynamicLogo from "./Logo";
 import Divider from "./ui/Divider";
+import { generateEmailLink } from "@/lib/utils";
 
 export default function Footer() {
   return (
@@ -13,18 +14,37 @@ export default function Footer() {
             <h5 className="mb-4 text-16 font-bold dark:text-white">
               Elsewhere
             </h5>
-            <Link href={""}>Email</Link>
-            <Link href={""}>LinkedIn</Link>
-            <Link href={""}>Github</Link>
-            <Link href={""}>Twitter</Link>
-            <Link href={""}>Discord</Link>
+            <Link
+              target="_blank"
+              href={generateEmailLink({ body: "", subject: "" })}
+            >
+              Email
+            </Link>
+            <Link
+              target="_blank"
+              href={"https://www.linkedin.com/in/rezaattarzadeh/"}
+            >
+              LinkedIn
+            </Link>
+            <Link target="_blank" href={"https://github.com/Re9iNee"}>
+              Github
+            </Link>
+            <Link target="_blank" href={"https://x.com/Re9iNee"}>
+              Twitter
+            </Link>
+            <Link
+              target="_blank"
+              href={"https://discordapp.com/users/435134219652694016"}
+            >
+              Discord
+            </Link>
           </div>
           <div className="flex flex-col gap-4">
             <h5 className="mb-4 text-16 font-bold dark:text-white">Links</h5>
-            <Link href={""}>About</Link>
-            <Link href={""}>Work</Link>
-            <Link href={""}>Tech Stack</Link>
-            <Link href={""}>Contact</Link>
+            <Link href={"/about"}>About</Link>
+            <Link href={"/works"}>Work</Link>
+            {/* <Link href={""}>Tech Stack</Link> */}
+            <Link href={"/contact"}>Contact</Link>
           </div>
         </div>
         <div className="flex flex-col justify-between">

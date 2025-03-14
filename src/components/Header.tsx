@@ -84,9 +84,18 @@ export default function Header() {
       </div>
 
       <div className="hidden items-center gap-6 p-4 text-24 xl:flex">
-        <FaLinkedin />
-        <FaXTwitter />
-        <FaGithub />
+        <Link
+          href={"https://www.linkedin.com/in/rezaattarzadeh/"}
+          target="_blank"
+        >
+          <FaLinkedin />
+        </Link>
+        <Link href={"https://x.com/Re9iNee"} target="_blank">
+          <FaXTwitter />
+        </Link>
+        <Link href={"https://github.com/Re9iNee"} target="_blank">
+          <FaGithub />
+        </Link>
         <div className="h-6 border-r border-black/20"></div>
         <ThemeSwitch />
       </div>

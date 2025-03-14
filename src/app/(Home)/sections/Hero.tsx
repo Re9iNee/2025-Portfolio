@@ -29,7 +29,14 @@ export default function Hero() {
           className="flex flex-col items-center gap-4 xl:flex-row"
         >
           <Button variant={"primary"} className="xl:w-fit">
-            See my Resume
+            <Link
+              download
+              href={
+                "https://d1ntfq67otjmwh.cloudfront.net/mora-blog-files/Front-End%20Engineer%20-%20Reza%20Attarzadeh.pdf"
+              }
+            >
+              See my Resume
+            </Link>
           </Button>{" "}
           <Button variant={"secondary"} className="xl:w-fit">
             <Link href={generateEmailLink({})}>Get in Touch</Link>

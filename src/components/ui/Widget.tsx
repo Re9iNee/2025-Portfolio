@@ -4,7 +4,7 @@ import { SendHorizontal, Stars } from "lucide-react";
 import Image from "next/image";
 import { Button } from "./Button";
 import Link from "next/link";
-import { cn } from "@/lib/utils";
+import { cn, generateEmailLink } from "@/lib/utils";
 
 type WidgetProps = {
   href: string;
@@ -63,7 +63,7 @@ export function ProjectPlaceholder() {
       </div>
 
       <Button variant={"primary"} icon={<SendHorizontal />} className="w-fit">
-        Get in Touch
+        <Link href={generateEmailLink({})}>Get in Touch</Link>
       </Button>
     </div>
   );
@@ -87,7 +87,7 @@ export function LetsWorkTogether() {
         icon={<SendHorizontal />}
         className="xl:w-fit"
       >
-        Get in Touch
+        <Link href={generateEmailLink({})}>Get in Touch</Link>
       </Button>
     </div>
   );

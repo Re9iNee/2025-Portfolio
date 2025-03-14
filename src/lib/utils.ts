@@ -13,7 +13,7 @@ type generateEmailParams = {
 export function generateEmailLink({
   to = "attarzadeh76@gmail.com",
   subject = "Let's work together on the new project",
-  body = "I saw your website and want to start working together on a this new idea I have, the idea is about ",
+  body = "I saw your website and want to start working together on a this new idea I have, the idea is about ...",
 }: generateEmailParams): string {
   return `mailto:${to}?subject=${subject} &body=${body}`;
 }
