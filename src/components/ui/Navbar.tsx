@@ -1,5 +1,8 @@
+"use client";
+
 import { cn } from "@/lib/utils";
 import Link from "next/link";
+import { usePathname, useRouter } from "next/navigation";
 import { IconType } from "react-icons";
 import {
   RiHome9Fill,
@@ -42,12 +45,12 @@ type Item = {
 };
 
 export default function Navbar() {
-  const currentRoute = "/";
+  const pathname = usePathname();
 
   return (
     <nav className="fixed bottom-3 flex min-w-[358px] justify-between rounded-xl border border-nav-border/30 bg-nav-background/30 px-4 py-2.5 dark:border-nav-border/40 dark:bg-nav-background/60 xl:hidden">
       {items.map((item) => (
-        <Item key={item.link} isActive={item.link === currentRoute} {...item} />
+        <Item key={item.link} isActive={item.link === pathname} {...item} />
       ))}
     </nav>
   );
@@ -62,7 +65,9 @@ const Item = ({ isActive, ActiveIcon, PassiveIcon, link }: ItemProps) => {
       href={link}
       className={cn(
         "grid h-10 w-14 place-items-center rounded-xl text-white-faint",
-        isActive && "w-14 rounded-xl bg-black/50 text-white",
+        isActive
+          ? "w-14 rounded-xl bg-black/50 text-white"
+          : "hover:bg-black/20",
       )}
     >
       {isActive ? (
