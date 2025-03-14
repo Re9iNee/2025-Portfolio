@@ -34,7 +34,7 @@ export const projects: CardProps[] = [
     title: "Wordpress Website",
     description:
       "Worked on so many Wordpress projects. this is the most recent one. This website is designed to showcase electric products on their website.",
-    logo: "/Projects/wordpress.png",
+    logo: "/Projects/wordpress-logo.png",
     href: "https://aria-electric.com",
   },
 ];
