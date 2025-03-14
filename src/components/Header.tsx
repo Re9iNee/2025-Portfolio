@@ -8,8 +8,7 @@ import {
 import { cn } from "@/lib/utils";
 import Link from "next/link";
 import React from "react";
-import { FaGithub, FaLinkedin } from "react-icons/fa";
-import { FaXTwitter } from "react-icons/fa6";
+import { FaGithub, FaLinkedin, FaYoutube } from "react-icons/fa";
 import DynamicLogo from "./Logo";
 import ThemeSwitch from "./ThemeSwitch";
 
@@ -84,14 +83,14 @@ export default function Header() {
       </div>
 
       <div className="hidden items-center gap-6 p-4 text-24 xl:flex">
+        <Link href={"https://www.youtube.com/@RezaAttarCode"} target="_blank">
+          <FaYoutube />
+        </Link>
         <Link
           href={"https://www.linkedin.com/in/rezaattarzadeh/"}
           target="_blank"
         >
           <FaLinkedin />
-        </Link>
-        <Link href={"https://x.com/Re9iNee"} target="_blank">
-          <FaXTwitter />
         </Link>
         <Link href={"https://github.com/Re9iNee"} target="_blank">
           <FaGithub />
