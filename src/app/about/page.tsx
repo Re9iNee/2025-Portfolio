@@ -55,7 +55,7 @@ export default function AboutPage() {
             <div>
               <h3>WHAT I DO</h3>
               <p>
-                With 8 years of experience in my different roles at different
+                With 9 years of experience in my different roles at different
                 companies! I decided to grow my personal brand! I have honed my
                 skills in ReactJS, NextJS, Tailwindcss, Typescript, Cypress,
                 NodeJS, Vitest. Started a{" "}
