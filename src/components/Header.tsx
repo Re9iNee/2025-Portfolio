@@ -1,14 +1,17 @@
 import {
   NavigationMenu,
+  NavigationMenuContent,
   NavigationMenuItem,
   NavigationMenuLink,
   NavigationMenuList,
+  NavigationMenuTrigger,
   navigationMenuTriggerStyle,
 } from "@/components/ui/NavigationMenu";
-import { cn } from "@/lib/utils";
+import { cn, getResumeFileLink } from "@/lib/utils";
 import Link from "next/link";
 import React from "react";
 import { FaGithub, FaLinkedin, FaYoutube } from "react-icons/fa";
+import { PiReadCvLogoLight } from "react-icons/pi";
 import DynamicLogo from "./Logo";
 import ThemeSwitch from "./ThemeSwitch";
 
@@ -42,31 +45,32 @@ export default function Header() {
                 </NavigationMenuLink>
               </Link>
             </NavigationMenuItem>
-            {/* <NavigationMenuItem>
+            <NavigationMenuItem>
               <NavigationMenuTrigger>More</NavigationMenuTrigger>
               <NavigationMenuContent>
                 <ul className="grid gap-3 p-4 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
                   <li className="row-span-3">
                     <NavigationMenuLink asChild>
-                      <a
-                        className="from-muted/50 to-muted flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b p-6 no-underline outline-none focus:shadow-md"
-                        href="/"
+                      <Link
+                        target="_blank"
+                        href={getResumeFileLink()}
+                        className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-muted/50 to-muted p-6 no-underline outline-none focus:shadow-md"
                       >
-                        <User className="h-6 w-6" />
+                        <PiReadCvLogoLight className="h-6 w-6" />
                         <div className="text-lg mb-2 mt-4 font-medium">
-                          shadcn/ui
+                          CV File
                         </div>
-                        <p className="text-sm text-muted-foreground leading-tight">
-                          Beautifully designed components built with Radix UI
-                          and Tailwind CSS.
+                        <p className="text-sm leading-tight text-muted-foreground">
+                          Professionally designed portfolio showcasing skills
+                          and career achievements.
                         </p>
-                      </a>
+                      </Link>
                     </NavigationMenuLink>
                   </li>
-                  <ListItem href="/docs" title="Introduction">
-                    Re-usable components built using Radix UI and Tailwind CSS.
+                  <ListItem href="/awards" title="Awards">
+                    Recognized achievements earned through hard work.
                   </ListItem>
-                  <ListItem href="/docs/installation" title="Installation">
+                  {/* <ListItem href="/docs/installation" title="Installation">
                     How to install dependencies and structure your app.
                   </ListItem>
                   <ListItem
@@ -74,10 +78,10 @@ export default function Header() {
                     title="Typography"
                   >
                     Styles for headings, paragraphs, lists...etc
-                  </ListItem>
+                  </ListItem> */}
                 </ul>
               </NavigationMenuContent>
-            </NavigationMenuItem> */}
+            </NavigationMenuItem>
           </NavigationMenuList>
         </NavigationMenu>
       </div>

@@ -1,8 +1,9 @@
 "use client";
 
-import { cn } from "@/lib/utils";
+import { cn, getResumeFileLink } from "@/lib/utils";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { PiReadCvLogoFill, PiReadCvLogoLight } from "react-icons/pi";
 import { IconType } from "react-icons";
 import {
   RiHome9Fill,
@@ -36,12 +37,19 @@ const items: Item[] = [
     ActiveIcon: RiPencilFill,
     PassiveIcon: RiPencilLine,
   },
+  {
+    target: "_blank",
+    link: getResumeFileLink(),
+    ActiveIcon: PiReadCvLogoLight,
+    PassiveIcon: PiReadCvLogoFill,
+  },
 ] as const;
 
 type Item = {
   link: string;
   PassiveIcon: IconType;
   ActiveIcon: IconType;
+  target?: "_blank";
 };
 
 export default function Navbar() {
@@ -59,10 +67,17 @@ export default function Navbar() {
 type ItemProps = {
   isActive?: boolean;
 } & Item;
-const Item = ({ isActive, ActiveIcon, PassiveIcon, link }: ItemProps) => {
+const Item = ({
+  isActive,
+  ActiveIcon,
+  PassiveIcon,
+  link,
+  target,
+}: ItemProps) => {
   return (
     <Link
       href={link}
+      target={target}
       className={cn(
         "grid h-10 w-14 place-items-center rounded-xl text-white-faint",
         isActive

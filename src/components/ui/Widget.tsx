@@ -28,7 +28,7 @@ export default function Widget({
   const Content = (
     <div
       className={cn(
-        "pt-8",
+        "flex h-full max-h-[400px] flex-col justify-between pt-8",
         isComingSoon && "transition-all group-hover:blur group-hover:grayscale",
       )}
     >

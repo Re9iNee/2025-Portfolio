@@ -1,8 +1,6 @@
 import Widget from "@/components/ui/Widget";
 import Bookshelf from "@public/Widgets/Bookshelf.png";
 import FaceEmoji from "@public/Widgets/emoji.png";
-import Notebook from "@public/Widgets/Notebook.png";
-import TechStack from "@public/Widgets/tech-stack.png";
 
 function GetToKnowMe() {
   return (
@@ -19,14 +17,14 @@ function GetToKnowMe() {
           subtitle="Who I am and What I do"
         />
 
-        <Widget
+        {/* <Widget
           isComingSoon
           href="#"
           title="Tech Stack"
           image={TechStack}
           imageAlt="Tech Stack Image"
           subtitle="The dev tools, apps and devices I use"
-        />
+        /> */}
 
         <Widget
           openInNewTab
@@ -34,17 +32,17 @@ function GetToKnowMe() {
           image={Bookshelf}
           imageAlt="Books image"
           subtitle="Books I've enjoyed reading"
-          href="https://www.goodreads.com/user/show/97249582"
+          href="https://www.goodreads.com/review/list/97249582-re9inee?page=1&shelf=read&view=covers"
         />
 
-        <Widget
+        {/* <Widget
           href="#"
           isComingSoon
           title="Notebook"
           image={Notebook}
           imageAlt="Notebook image"
           subtitle="My thoughts, insights and reflections"
-        />
+        /> */}
       </div>
     </section>
   );

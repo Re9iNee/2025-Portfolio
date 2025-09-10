@@ -6,7 +6,7 @@ import { SendHorizontal } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import Signature from "../../components/about/Signature";
-import { generateEmailLink } from "@/lib/utils";
+import { generateEmailLink, getResumeFileLink } from "@/lib/utils";
 
 export default function AboutPage() {
   return (
@@ -49,7 +49,7 @@ export default function AboutPage() {
               <p>
                 I&apos;m <span className="text-onyx dark:text-white">Reza</span>
                 (Pronounced “Rezâ”) a front-end engineer and back-end engineer
-                based in Mashhad, Iran 🇮🇷.
+                based in Iran 🇮🇷.
               </p>
             </div>
             <div>
@@ -75,17 +75,25 @@ export default function AboutPage() {
                 Before becoming a software engineer I was always curious how
                 electronic devices work, Starting with linux and continued my
                 journey in Wordpress, It boosts me up up by tons! This was from
-                the age of 15, Attended to two coding contests in Tehran Sharif
-                University and win them both with my friends and teammates!
+                the age of 15, Attended to three coding contests in Tehran
+                Sharif University and{" "}
+                <span className="text-onyx dark:text-white">won</span> two of
+                them and got the 3rd place with my friends and teammates!
               </p>
             </div>
           </div>
           <p className="text-15 text-gray-dark [&>a]:text-onyx [&>a]:underline [&>a]:dark:text-white">
             Feel free to reach out via{" "}
             <Link href={"mailto:attarzadeh76@gmail.com"}>e-mail</Link>, or
-            follow me on <Link href="link-to-x">Twitter</Link>. Want to see
-            where I’ve worked? Check out my{" "}
-            <Link href={"link-to-cv"}>Resume</Link>, or Connect with me on{" "}
+            follow me on{" "}
+            <Link href="https://x.com/Re9iNee" target="_blank">
+              X
+            </Link>
+            . Want to see where I’ve worked? Check out my{" "}
+            <Link href={getResumeFileLink()} target="_blank">
+              Resume
+            </Link>
+            , or Connect with me on{" "}
             <Link href={"link to linkedin"}>LinkedIn</Link>.
           </p>
           <div className="space-y-4">

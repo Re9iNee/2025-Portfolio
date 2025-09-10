@@ -17,3 +17,7 @@ export function generateEmailLink({
 }: generateEmailParams): string {
   return `mailto:${to}?subject=${subject} &body=${body}`;
 }
+
+export function getResumeFileLink(): string {
+  return "https://drive.google.com/file/d/1zi8ItZDUou8okaoJ-36bf7Sbteq6vK5_/view?usp=sharing";
+}

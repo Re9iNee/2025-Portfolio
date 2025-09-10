@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/Button";
-import { generateEmailLink } from "@/lib/utils";
+import { generateEmailLink, getResumeFileLink } from "@/lib/utils";
 import Portrait from "@public/portrait.jpg";
 import Image from "next/image";
 import Link from "next/link";
@@ -17,24 +17,24 @@ export default function Hero() {
         </div>
         <p className="text-15 font-medium text-gray-dark xl:max-w-[70%] xl:text-24">
           I build web-apps <br /> Real{" "}
-          <span className="font-bold text-onyx">Fast!</span> <br /> Real{" "}
-          <span className="font-bold text-onyx">Optimized!</span> <br /> No need
-          to look for another engineer I do all the work!{" "}
-          <span className="font-bold text-onyx">Back-end Front-end</span>, Just
-          give me an <span className="underline">Idea!</span> Sky&apos;s the
-          limit for us!
+          <span className="font-bold text-onyx dark:text-white">Fast!</span>{" "}
+          <br /> Real{" "}
+          <span className="font-bold text-onyx dark:text-white">
+            Optimized!
+          </span>{" "}
+          <br /> No need to look for another engineer I do all the work!{" "}
+          <span className="font-bold text-onyx dark:text-white">
+            Back-end Front-end
+          </span>
+          , Just give me an <span className="underline">Idea!</span> Sky&apos;s
+          the limit for us!
         </p>
         <div
           aria-label="call to actions"
           className="flex flex-col items-center gap-4 xl:flex-row"
         >
           <Button variant={"primary"} className="xl:w-fit">
-            <Link
-              download
-              href={
-                "https://d1ntfq67otjmwh.cloudfront.net/mora-blog-files/Front-End%20Engineer%20-%20Reza%20Attarzadeh.pdf"
-              }
-            >
+            <Link target="_blank" href={getResumeFileLink()}>
               See my Resume
             </Link>
           </Button>{" "}
