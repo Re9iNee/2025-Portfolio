@@ -1,8 +1,7 @@
 import Card from "@/components/ui/Card";
 import Divider from "@/components/ui/Divider";
 import { ProjectPlaceholder } from "@/components/ui/Widget";
-
-import { projects } from "../../lib/projects";
+import { projects } from "@/lib/projects";
 
 export default function WorksPage() {
   return (

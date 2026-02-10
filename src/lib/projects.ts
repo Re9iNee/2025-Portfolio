@@ -1,10 +1,19 @@
 import cleafin from "@public/Projects/cleafin.png";
 import moraBlog from "@public/Projects/mora-blog.png";
 import moraDash from "@public/Projects/mora-dash.png";
+import myca from "@public/Projects/myca.png";
 import aria from "@public/Projects/aria-electric.png";
 import { CardProps } from "@/components/ui/Card";
 
 export const projects: CardProps[] = [
+  {
+    image: myca,
+    title: "Myca",
+    logo: "/Projects/myca-icon.svg",
+    href: "https://myca.mora-ed.com",
+    description:
+      "Myca is an online service to manage and log your car services, get notified when it's due, and more",
+  },
   {
     image: moraDash,
     title: "Mora Dashboard",
