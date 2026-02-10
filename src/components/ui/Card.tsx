@@ -25,9 +25,9 @@ export default function Card({
         <div className="space-y-4">
           <Image
             src={logo}
-            alt={`${title} logo`}
             width={70}
             height={70}
+            alt={`${title} logo`}
             className="grayscale transition-all group-hover:grayscale-0"
           />
           <h3 className="text-20 font-extrabold">{title}</h3>

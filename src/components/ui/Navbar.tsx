@@ -3,8 +3,8 @@
 import { cn, getResumeFileLink } from "@/lib/utils";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { PiReadCvLogoFill, PiReadCvLogoLight } from "react-icons/pi";
 import { IconType } from "react-icons";
+import { PiReadCvLogoFill, PiReadCvLogoLight } from "react-icons/pi";
 import {
   RiHome9Fill,
   RiHomeLine,

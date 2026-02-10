@@ -1,8 +1,7 @@
 import Link from "next/link";
-
 import DynamicLogo from "./Logo";
 import Divider from "./ui/Divider";
-import { generateEmailLink } from "@/lib/utils";
+import { getGithubLink, getLinkedinLink, getYoutubeLink } from "@/lib/utils";
 
 export default function Footer() {
   return (
@@ -14,42 +13,23 @@ export default function Footer() {
             <h5 className="mb-4 text-16 font-bold dark:text-white">
               Elsewhere
             </h5>
-            <Link
-              target="_blank"
-              href={generateEmailLink({ body: "", subject: "" })}
-            >
+            <Link target="_blank" href={"/contact"}>
               Email
             </Link>
-            <Link
-              target="_blank"
-              href={"https://www.youtube.com/@RezaAttarCode"}
-            >
+            <Link target="_blank" href={getYoutubeLink()}>
               Youtube
             </Link>
-            <Link
-              target="_blank"
-              href={"https://www.linkedin.com/in/rezaattarzadeh/"}
-            >
+            <Link target="_blank" href={getLinkedinLink()}>
               LinkedIn
             </Link>
-            <Link target="_blank" href={"https://github.com/Re9iNee"}>
+            <Link target="_blank" href={getGithubLink()}>
               Github
-            </Link>
-            <Link target="_blank" href={"https://x.com/Re9iNee"}>
-              Twitter
-            </Link>
-            <Link
-              target="_blank"
-              href={"https://discordapp.com/users/435134219652694016"}
-            >
-              Discord
             </Link>
           </div>
           <div className="flex flex-col gap-4">
             <h5 className="mb-4 text-16 font-bold dark:text-white">Links</h5>
             <Link href={"/about"}>About</Link>
             <Link href={"/works"}>Work</Link>
-            {/* <Link href={""}>Tech Stack</Link> */}
             <Link href={"/contact"}>Contact</Link>
           </div>
         </div>

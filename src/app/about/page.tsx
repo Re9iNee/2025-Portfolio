@@ -3,10 +3,10 @@ import Divider from "@/components/ui/Divider";
 import PortraitImage from "@public/portrait.jpg";
 import { SendHorizontal } from "lucide-react";
 
+import { getResumeFileLink, getYoutubeLink } from "@/lib/utils";
 import Image from "next/image";
 import Link from "next/link";
-import Signature from "../../components/about/Signature";
-import { generateEmailLink, getResumeFileLink } from "@/lib/utils";
+import Signature from "@/components/about/Signature";
 
 export default function AboutPage() {
   return (
@@ -38,7 +38,7 @@ export default function AboutPage() {
             icon={<SendHorizontal />}
             className="mx-auto hidden w-fit xl:flex"
           >
-            <Link href={generateEmailLink({})}>Get in touch</Link>
+            <Link href={"/contact"}>Get in touch</Link>
           </Button>
         </div>
 
@@ -60,8 +60,8 @@ export default function AboutPage() {
                 skills in ReactJS, NextJS, Tailwindcss, Typescript, Cypress,
                 NodeJS, Vitest. Started a{" "}
                 <Link
-                  href={"https://www.youtube.com/@RezaAttarCode"}
                   target="_blank"
+                  href={getYoutubeLink()}
                   className="text-onyx underline dark:text-white"
                 >
                   Youtube Channel
@@ -84,12 +84,7 @@ export default function AboutPage() {
           </div>
           <p className="text-15 text-gray-dark [&>a]:text-onyx [&>a]:underline [&>a]:dark:text-white">
             Feel free to reach out via{" "}
-            <Link href={"mailto:attarzadeh76@gmail.com"}>e-mail</Link>, or
-            follow me on{" "}
-            <Link href="https://x.com/Re9iNee" target="_blank">
-              X
-            </Link>
-            . Want to see where I’ve worked? Check out my{" "}
+            <Link href={"mailto:attarzadeh76@gmail.com"}>e-mail</Link> or
             <Link href={getResumeFileLink()} target="_blank">
               Resume
             </Link>
@@ -105,7 +100,7 @@ export default function AboutPage() {
 
       <div className="xl:hidden">
         <Button variant={"primary"} icon={<SendHorizontal />}>
-          <Link href={generateEmailLink({})}>Get in touch</Link>
+          <Link href={"/contact"}>Get in touch</Link>
         </Button>
       </div>
     </main>

@@ -1,4 +1,5 @@
 import Widget from "@/components/ui/Widget";
+import { getGoodreadsLink } from "@/lib/utils";
 import Bookshelf from "@public/Widgets/Bookshelf.png";
 import FaceEmoji from "@public/Widgets/emoji.png";
 
@@ -31,8 +32,8 @@ function GetToKnowMe() {
           title="Bookshelf"
           image={Bookshelf}
           imageAlt="Books image"
+          href={getGoodreadsLink()}
           subtitle="Books I've enjoyed reading"
-          href="https://www.goodreads.com/review/list/97249582-re9inee?utf8=✓&shelf=read&view=covers&title=re9inee&per_page=infinite"
         />
 
         {/* <Widget

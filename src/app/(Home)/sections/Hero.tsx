@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/Button";
-import { generateEmailLink, getResumeFileLink } from "@/lib/utils";
+import { getResumeFileLink } from "@/lib/utils";
 import Portrait from "@public/portrait.jpg";
 import Image from "next/image";
 import Link from "next/link";
@@ -39,7 +39,7 @@ export default function Hero() {
             </Link>
           </Button>{" "}
           <Button variant={"secondary"} className="xl:w-fit">
-            <Link href={generateEmailLink({})}>Get in Touch</Link>
+            <Link href={"/contact"}>Get in Touch</Link>
           </Button>
         </div>
       </div>

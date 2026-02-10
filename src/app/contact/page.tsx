@@ -2,10 +2,10 @@ import Divider from "@/components/ui/Divider";
 import Close from "@public/Contact Window/close.svg";
 import Fullscreen from "@public/Contact Window/fullscreen.svg";
 import Minimize from "@public/Contact Window/minimize.svg";
-import { LuNotebook } from "react-icons/lu";
 import { MdEmail } from "react-icons/md";
-
-import { FaDiscord, FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa6";
+import { generateEmailLink, getGithubLink, getLinkedinLink } from "@/lib/utils";
+import Link from "next/link";
+import { FaGithub, FaLinkedin } from "react-icons/fa6";
 import ContactForm from "./form";
 
 function ContactPage() {
@@ -42,15 +42,17 @@ function ContactPage() {
 
       <section
         aria-label="link to other social medias"
-        className="mx-auto grid w-fit grid-cols-3 gap-11 text-24 xl:flex [&>*]:cursor-pointer"
+        className="mx-auto grid w-fit grid-cols-4 gap-11 text-24 xl:flex [&>*]:cursor-pointer"
       >
-        <MdEmail />
-        <LuNotebook />
-        <FaLinkedin />
-
-        <FaTwitter />
-        <FaGithub />
-        <FaDiscord />
+        <Link href={generateEmailLink({})}>
+          <MdEmail />
+        </Link>
+        <Link href={getLinkedinLink()} target="_blank">
+          <FaLinkedin />
+        </Link>
+        <Link href={getGithubLink()} target="_blank">
+          <FaGithub />
+        </Link>
       </section>
     </main>
   );

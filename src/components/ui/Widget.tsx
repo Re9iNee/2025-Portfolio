@@ -1,6 +1,6 @@
 import { StaticImport } from "next/dist/shared/lib/get-img-props";
 
-import { cn, generateEmailLink } from "@/lib/utils";
+import { cn } from "@/lib/utils";
 import { SendHorizontal, Stars } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
@@ -87,7 +87,7 @@ export function ProjectPlaceholder() {
       </div>
 
       <Button variant={"primary"} icon={<SendHorizontal />} className="w-fit">
-        <Link href={generateEmailLink({})}>Get in Touch</Link>
+        <Link href={"/contact"}>Get in Touch</Link>
       </Button>
     </div>
   );
@@ -111,7 +111,7 @@ export function LetsWorkTogether() {
         icon={<SendHorizontal />}
         className="xl:w-fit"
       >
-        <Link href={generateEmailLink({})}>Get in Touch</Link>
+        <Link href="/contact">Get in Touch</Link>
       </Button>
     </div>
   );
