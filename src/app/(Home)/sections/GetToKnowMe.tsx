@@ -32,7 +32,7 @@ function GetToKnowMe() {
           image={Bookshelf}
           imageAlt="Books image"
           subtitle="Books I've enjoyed reading"
-          href="https://www.goodreads.com/review/list/97249582-re9inee?page=1&shelf=read&view=covers"
+          href="https://www.goodreads.com/review/list/97249582-re9inee?utf8=✓&shelf=read&view=covers&title=re9inee&per_page=infinite"
         />
 
         {/* <Widget
