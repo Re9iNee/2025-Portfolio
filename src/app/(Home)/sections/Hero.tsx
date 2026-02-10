@@ -26,8 +26,6 @@ export default function Hero() {
           <span className="font-bold text-onyx dark:text-white">
             Back-end Front-end
           </span>
-          , Just give me an <span className="underline">Idea!</span> Sky&apos;s
-          the limit for us!
         </p>
         <div
           aria-label="call to actions"

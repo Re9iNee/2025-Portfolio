@@ -35,13 +35,14 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body
-        className={`${inter.variable} ${nanum.variable} relative mx-auto flex min-h-screen max-w-screen-lg flex-col items-center overflow-x-hidden font-inter text-onyx antialiased dark:text-white`}
+        className={`${inter.variable} ${nanum.variable} relative mx-auto flex min-h-screen max-w-screen-lg flex-col items-center justify-between overflow-x-hidden font-inter text-onyx antialiased dark:text-white`}
       >
         <TopGradient />
 
         <Providers>
           <Header />
           {children}
+
           <Footer />
           <Navbar />
         </Providers>
